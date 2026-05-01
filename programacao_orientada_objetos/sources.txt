@@ -1,0 +1,3 @@
+./Main.java
+./src/application/services/Service.java
+./src/interfaces/Controller.java

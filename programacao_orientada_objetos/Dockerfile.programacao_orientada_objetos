@@ -1,0 +1,8 @@
+FROM eclipse-temurin:21-jdk-jammy
+
+WORKDIR /programacao_orientada_objetos
+
+COPY . .
+
+# CMD sh -c "find . -name '*.java' > sources.txt && javac @sources.txt && java Main"
+CMD sh -c "find . -name '*.java' > sources.txt && javac -d . @sources.txt && java Main"

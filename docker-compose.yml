@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  programacao_orientada_objetos:
+    build:
+      context: ./programacao_orientada_objetos
+      dockerfile: Dockerfile.programacao_orientada_objetos
+    container_name: programacao_orientada_objetos
+    ports:
+      - "${APP_PROGRAMACAO_ORIENTADA_OBJETOS_PORT}:${APP_PROGRAMACAO_ORIENTADA_OBJETOS_PORT}"
+    volumes:
+      - ./programacao_orientada_objetos:/programacao_orientada_objetos
+    stdin_open: true
+    tty: true
+    env_file:
+      - ./programacao_orientada_objetos/.env
+    environment:
+      APP_HOST: "${APP_PROGRAMACAO_ORIENTADA_OBJETOS_HOST}"
+      APP_PORT: "${APP_PROGRAMACAO_ORIENTADA_OBJETOS_PORT}"
+
