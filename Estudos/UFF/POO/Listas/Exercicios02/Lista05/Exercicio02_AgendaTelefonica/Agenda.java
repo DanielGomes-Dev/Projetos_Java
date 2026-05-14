@@ -1,5 +1,3 @@
-package Lista05.Exercicio02_AgendaTelefonica;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +22,7 @@ public class Agenda {
         }
     }
 
-    public static void main (String args[]){
+    public static void main (String[] args){
         Contato contato_01 = new Contato("Daniel Gomes", "021 98888-8888");
         Contato contato_02 = new Contato("Maria Betania", "021 98888-8889");
         

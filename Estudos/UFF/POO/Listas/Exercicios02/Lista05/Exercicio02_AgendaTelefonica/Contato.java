@@ -1,5 +1,3 @@
-package Lista05.Exercicio02_AgendaTelefonica;
-
 public class Contato {
     public String name;
     public String number;
