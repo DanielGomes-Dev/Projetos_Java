@@ -1,9 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Emprestimo {
 
-    public Emprestimo (){
-        System.out.println("Emprestimo");
-    }
-    public static void main(String[] args){
+    Livro livro;
+    Pessoa pessoa;
 
+    public Emprestimo (Livro livro, Pessoa pessoa){
+        System.out.println("Constructor Emprestimo");
+        this.livro = livro;
+        this.pessoa = pessoa;
     }
+
+    public Livro getLivro() {
+        return livro;
+    }
+    
+    
 }
