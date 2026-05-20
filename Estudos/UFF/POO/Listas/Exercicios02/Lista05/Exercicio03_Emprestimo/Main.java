@@ -1,32 +1,12 @@
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Main {    
 
-
-    List<Emprestimo> emprestimos = new ArrayList<>();
-
     
-    public void realizar_emprestimos(Livro livro, Pessoa pessoa){
-        if(!livroJaEmprestado(livro)){
-            Emprestimo emprestimo = new Emprestimo(livro, pessoa);
-            this.emprestimos.add(emprestimo);
-        } else {
-            System.out.println("Erro Livro ja emprestado.");
-        }
+    public static void main(String[] args){
 
-    }
+        Biblioteca biblioteca = new Biblioteca();
 
-    public boolean livroJaEmprestado(Livro livroAlvo) {
-        for (Emprestimo e : this.emprestimos) {
-            if (e.getLivro().equals(livroAlvo)) {
-                return true; 
-            }
-        }
-        return false; // Percorreu tudo e não encontrou
-    }
-    
-    public void main(String[] args){
 
         Livro livro_01 = new Livro(
             "0001",
@@ -49,13 +29,15 @@ public class Main {
             "Praia Vermelha"
         );
         
-        
         System.out.println(pessoa_01.getNome());
 
-        realizar_emprestimos(livro_01, pessoa_01);
-        realizar_emprestimos(livro_01, pessoa_02);
+        Emprestimo emprestimo01 = biblioteca.realizar_emprestimos(livro_01, pessoa_01);
+        Emprestimo emprestimo02 = biblioteca.realizar_emprestimos(livro_01, pessoa_02);
 
-        
+        biblioteca.devolver_livro(emprestimo01);
+
+        Emprestimo emprestimo03 = biblioteca.realizar_emprestimos(livro_01, pessoa_02);
+
 
     }
 }

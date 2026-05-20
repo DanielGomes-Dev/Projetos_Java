@@ -1,19 +1,22 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Emprestimo {
 
-    Livro livro;
-    Pessoa pessoa;
+    private Livro livro;
+    private Pessoa pessoa;
 
     public Emprestimo (Livro livro, Pessoa pessoa){
-        System.out.println("Constructor Emprestimo");
+        System.out.println("Emprestimo Realizado");
         this.livro = livro;
         this.pessoa = pessoa;
     }
 
     public Livro getLivro() {
-        return livro;
+        return this.livro;
+    }
+
+    
+    public Pessoa getPessoa() {
+        return this.pessoa;
     }
     
     
