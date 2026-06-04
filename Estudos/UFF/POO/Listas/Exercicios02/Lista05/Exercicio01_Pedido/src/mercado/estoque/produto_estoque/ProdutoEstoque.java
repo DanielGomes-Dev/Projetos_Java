@@ -12,7 +12,6 @@ public class ProdutoEstoque {
     public ProdutoEstoque(Produto produto, int quantidade){
         this.produto = produto;
         this.quantidade = quantidade;
-
     }
     
 }
