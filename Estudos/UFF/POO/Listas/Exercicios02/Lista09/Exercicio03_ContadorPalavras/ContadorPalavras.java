@@ -7,7 +7,7 @@ public class ContadorPalavras {
     private final Map<String, Integer> contagem;
 
     public ContadorPalavras() {
-        this.contagem = new HashMap<>(); // Uso de HashMap conforme material complementar
+        this.contagem = new HashMap<>();
     }
 
 
