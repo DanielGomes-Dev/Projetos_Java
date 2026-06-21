@@ -5,7 +5,6 @@ import java.util.List;
 
 import src.mercado.produto.Produto;
 import src.mercado.estoque.produto_estoque.ProdutoEstoque;
-// import src.mercado.item_pedido;
 
 public class Estoque {
 
@@ -26,18 +25,7 @@ public class Estoque {
         produtos.add(produtoEstoque);
     }
 
-    // private int getProdutosEstoque(Produto produto, Pedido pedido){
-    //     List<ItemPedido> itens = pedido.getItens();
-    //     int quantidade_no_carrinho = 0;
-    //     for (ItemPedido item : itens) {
-    //         Produto produto_carrinho = item.produto;
-    //         if(produto_carrinho.nome == produto.nome){
-    //             quantidade_no_carrinho += item.quantidade;
-    //         }
-    //     }
-
-    //     int quantidade_disponivel = produto.quantidadeEstoque - quantidade_no_carrinho; 
-
-    //     return quantidade_disponivel;
-    // }
+    public List<ProdutoEstoque> getProdutosEstoque(){
+        return produtos;
+    }
 }

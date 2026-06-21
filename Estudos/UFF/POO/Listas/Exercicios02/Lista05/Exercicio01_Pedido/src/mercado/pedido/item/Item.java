@@ -1,3 +1,4 @@
+package src.mercado.pedido.item;
 import src.mercado.produto.Produto;
 
 public class Item {
