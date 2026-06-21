@@ -1,10 +1,5 @@
 package src.mercado;
-// import java.util.ArrayList;
-// import java.util.List;
-// import java.util.Scanner;
 
-// import src.cliente;
-// import src.cliente.Cliente;
 import src.mercado.produto.Produto;
 
 import java.util.List;
@@ -14,8 +9,6 @@ import src.cliente.Cliente;
 import src.mercado.estoque.Estoque;
 import src.mercado.estoque.produto_estoque.ProdutoEstoque;
 import src.mercado.pedido.Pedido;
-
-// import src.mercado.pedido.item.ItemPedido;
 
 
 public class Mercado {

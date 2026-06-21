@@ -1,13 +1,10 @@
 import java.util.List;
 import java.util.Scanner;
-// import java.util.ArrayList;
-// import java.util.List;
 
 import src.mercado.Mercado;
 import src.mercado.estoque.produto_estoque.ProdutoEstoque;
 import src.mercado.pedido.Pedido;
 import src.cliente.Cliente;
-// import src.mercado.pedido.Pedido;
 
 public class Main {    
 

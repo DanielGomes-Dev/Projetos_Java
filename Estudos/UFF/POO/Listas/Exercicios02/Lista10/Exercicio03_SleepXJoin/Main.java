@@ -21,21 +21,16 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("[MAIN] Thread principal iniciada.");
         
-        // Instancia a tarefa (tempo base de 3000ms ou 3 segundos)
         ProcessoPesadoTask tarefa = new ProcessoPesadoTask("Processo-A", 3000);
         
-        // Associa a tarefa executável a uma Thread
         Thread threadA = new Thread(tarefa);
         
         System.out.println("[MAIN] Disparando a Thread secundária...");
-        threadA.start(); // Inicia a thread A
+        threadA.start(); 
         
-        
-        // Ao invés de adivinhar o tempo (sleep), rastreamos o ESTADO (join).
         try {
             System.out.println("[MAIN] Chamando threadA.join(). A Main ficará bloqueada aguardando...");
             
-            // O join() neutraliza o avanço da thread principal até que thread A termine.
             threadA.join(); 
             
             System.out.println("[MAIN] threadA.join() liberado! Isso significa que a threadA terminou de fato.");

@@ -26,24 +26,19 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Iniciando o processamento multithread...");
         
-        // 1. Instanciamos a tarefa que contém o estado e a lógica (recurso compartilhado)
         ContadorTask contador = new ContadorTask();
         
-        // Array para guardar as referências das threads e rastreá-las
         Thread[] threads = new Thread[10];
         
-        // 2. Pilar da Simetria: Distribuímos o mesmo objeto para 10 threads distintas.
-        // O modificador 'synchronized' será o responsável por arbitrar o acesso.
+
         for (int i = 0; i < 10; i++) {
             threads[i] = new Thread(contador);
-            threads[i].start(); // Dispara a execução chamando run() implicitamente [cite: 108]
+            threads[i].start(); 
         }
         
-        // 3. Pilar da Anatomia do Passo Intermediário:
-        // A thread principal (main) deve esperar explicitamente o término das demais.
+
         for (int i = 0; i < 10; i++) {
             try {
-                // O método join() bloqueia a thread corrente e aguarda a outra terminar [cite: 125]
                 threads[i].join(); 
             } catch (InterruptedException e) {
                 System.err.println("A thread principal foi interrompida.");
@@ -51,9 +46,7 @@ public class Main {
             }
         }
         
-        // 4. Validação e Demonstração
-        // Graças ao modificador synchronized no método 'proximo()', o Set foi
-        // preenchido com exatidão, atestando a ausência de condições de corrida.
+
         System.out.println("Processamento finalizado!");
         System.out.println("Quantidade de números únicos processados: " + contador.getTamanhoSet());
         

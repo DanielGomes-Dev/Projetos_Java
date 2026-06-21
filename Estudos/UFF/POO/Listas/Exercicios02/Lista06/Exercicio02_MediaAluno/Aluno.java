@@ -79,7 +79,7 @@ public class Aluno {
 
 
     public String verificarStatus() {
-        double media = calcularMedia(); // Reaproveitamento de código (Alta Coesão)
+        double media = calcularMedia();
         
         if (media > 6.0) {
             return "Aprovado";
